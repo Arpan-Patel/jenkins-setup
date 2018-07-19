@@ -14,7 +14,15 @@ pipeline {
     stage('Archive') {
       steps {
         echo 'Archive'
-        build 'copy_images'
+        sh '''DIR_NAME=Rel_$BUILD_ID-`date +%d-%m-%Y`
+sleep 3
+
+DIR_NAME=Rel_$BUILD_ID-`date +%d-%m-%Y`
+
+sleep 3
+
+
+DIR_NAME=Rel_$BUILD_ID-`date +%d-%m-%Y`'''
       }
     }
     stage('Deliver') {
