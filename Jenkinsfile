@@ -75,7 +75,13 @@ ls -h *.tar.bz2
     stage('Deliver') {
       steps {
         echo 'Deliver'
-        mail(subject: 'Release Available', body: 'Sync, build, archive and deliver process completed successfully.', from: 'arpan.patel@einfochips.com', to: 'arpan.patel@einfochips.com')
+        sh '''#!/bin/bash
+DIR_NAME=Rel_$BUILD_ID-`date +%d-%m-%Y`
+
+echo \'Deliver\'
+
+#Need to transfer files into ftp server
+echo \'Need to transfer files into ftp server\''''
       }
     }
   }
