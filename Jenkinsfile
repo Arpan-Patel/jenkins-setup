@@ -14,6 +14,7 @@ pipeline {
     stage('Archive') {
       steps {
         echo 'Archive'
+        build 'copy_images'
       }
     }
     stage('Deliver') {
