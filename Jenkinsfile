@@ -4,6 +4,21 @@ pipeline {
     stage('Sync') {
       steps {
         echo 'Sync'
+        sh '''echo \'sync, build and copy images\'
+
+cd /home/arpan/Work/lumus_src
+PATH=~/bin:$PATH
+
+repo sync -j4
+
+mkdir -p out/target/common/obj
+if [ $? -eq 0 ]
+	then
+		echo "Directory created successfully"
+        cp -vr vendor/qcom/proprietary/prebuilt/target/common/obj/JAVA_LIBRARIES out/target/common/obj/
+	else
+		echo "Failed to create out directory"
+fi'''
       }
     }
     stage('Build') {
@@ -14,15 +29,6 @@ pipeline {
     stage('Archive') {
       steps {
         echo 'Archive'
-        sh '''DIR_NAME=Rel_$BUILD_ID-`date +%d-%m-%Y`
-sleep 3
-
-DIR_NAME=Rel_$BUILD_ID-`date +%d-%m-%Y`
-
-sleep 3
-
-
-DIR_NAME=Rel_$BUILD_ID-`date +%d-%m-%Y`'''
       }
     }
     stage('Deliver') {
