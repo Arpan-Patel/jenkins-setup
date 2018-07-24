@@ -7,7 +7,9 @@ pipeline {
         sh '''echo \'sync, build and copy images\'
 
 cd /mnt/4TB-Part-1/lumus/Lumus_1.7.4
+
 PATH=~/bin:$PATH
+
 
 repo sync -j4
 
