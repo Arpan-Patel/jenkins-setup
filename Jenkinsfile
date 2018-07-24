@@ -11,7 +11,7 @@ cd /mnt/4TB-Part-1/lumus/Lumus_1.7.4
 PATH=~/bin:$PATH
 
 
-~/bin/repo sync -j4
+/home/einfochips/bin/repo sync -j4
 
 mkdir -p out/target/common/obj
 if [ $? -eq 0 ]
