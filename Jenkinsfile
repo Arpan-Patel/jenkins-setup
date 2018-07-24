@@ -4,8 +4,7 @@ pipeline {
     stage('Sync') {
       steps {
         echo 'Sync'
-        sh '''#!/bin/bash
-echo \'sync, build and copy images\'
+        sh '''echo \'sync, build and copy images\'
 
 cd /mnt/4TB-Part-1/lumus/Lumus_1.7.4
 PATH=~/bin:$PATH
