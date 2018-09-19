@@ -7,7 +7,7 @@ pipeline {
         sh '''echo \'sync, build and copy images\'
 
 cd /home/einfochips/Lumus/Src
-PATH=~/bin:$PATH
+PATH=/home/einfochips/bin:$PATH
 
 repo sync
 
