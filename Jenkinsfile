@@ -65,7 +65,7 @@ echo sensors.ssc.so > /home/einfochips/Lumus/releases_lumus/$DIR_NAME/system-etc
 echo qfp.wakeup.so >> /home/einfochips/Lumus/releases_lumus/$DIR_NAME/system-etc-sensors-hals_SSC.conf
 
 #create tar for *img files.
-cd /home/arpan/Work/releases_lumus/$DIR_NAME
+cd /home/einfochips/Lumus/releases_lumus/$DIR_NAME
 tar cfjv $DIR_NAME.tar.bz2 *
 
 ls -h *.tar.bz2
