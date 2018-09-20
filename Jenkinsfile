@@ -49,6 +49,7 @@ mkdir -p /home/einfochips/Lumus/releases_lumus/$DIR_NAME
 
 # move produced *.img to build artifacts dir:
 cp -v /home/einfochips/Lumus/releases_lumus/flash-images.sh /home/einfochips/Lumus/releases_lumus/$DIR_NAME
+cp -v /home/einfochips/Lumus/releases_lumus/flash-images-with-mac-address.sh /home/einfochips/Lumus/releases_lumus/$DIR_NAME
 cp -v /home/einfochips/Lumus/Src/out/target/product/msm8996/persist.img /home/einfochips/Lumus/releases_lumus/$DIR_NAME
 cp -v /home/einfochips/Lumus/Src/out/target/product/msm8996/cache.img /home/einfochips/Lumus/releases_lumus/$DIR_NAME
 cp -v /home/einfochips/Lumus/Src/out/target/product/msm8996/android-info.txt /home/einfochips/Lumus/releases_lumus/$DIR_NAME
